@@ -4,19 +4,139 @@
   <id>http://localhost:4000/</id>
   <title>Chirpy</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-03-31T10:50:45+09:00</updated>
+  <updated>2025-03-31T18:21:59+09:00</updated>
   <author>
     <name>your_full_name</name>
     <uri>http://localhost:4000/</uri>
   </author>
   <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
-  <link rel="alternate" type="text/html" hreflang="en"
+  <link rel="alternate" type="text/html" hreflang="ko-KR"
     href="http://localhost:4000/"/>
   <generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator>
   <rights> © 2025 your_full_name </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>빅데이터</title>
+    <link href="http://localhost:4000/posts/%EB%B9%85%EB%8D%B0%EC%9D%B4%ED%84%B0/" rel="alternate" type="text/html" title="빅데이터" />
+    <published>2025-03-26T00:00:00+09:00</published>
+  
+    <updated>2025-03-30T00:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/%EB%B9%85%EB%8D%B0%EC%9D%B4%ED%84%B0/</id>
+    <content type="text/html" src="http://localhost:4000/posts/%EB%B9%85%EB%8D%B0%EC%9D%B4%ED%84%B0/" />
+    <author>
+      <name>your_full_name</name>
+    </author>
+
+  
+    
+    <category term="python" />
+    
+  
+
+  <summary>파이썬은 무엇인가? (파이썬에 대해)  만든이 : 귀도 반 로썸이 만든 인터프리터 언어 (한 줄씩 코드해석, 그떄그때 실행O)  강력한 객체지향프로그래밍 언어이다.  설치방법 파이썬 홈페이지에 접속하여, 다운로드  데이터 과학이나 기계학습에 관련된 다양한 패키지 아나콘다 -  코래버러토리 - WEB환경 실습  파이썬의 특징 다양한 산업에서 사용 (EX. 다양한 패키지를 제공한다) 아나콘다, PIP, 주피터 (생태계가 넓다)  직관적인 코드, 뛰어난 가독성 코드가 인간친화적이다 영어 문장을 읽는것과 같다 라고 표현한다.  아래는, java와 python의 a+b의 코드를 나타낸 것이다.  public class Main{   public static void main(String[] args){     ...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>프레임워크 SQL 2일차</title>
+    <link href="http://localhost:4000/posts/%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC-2%EB%B2%88%EC%A7%B8/" rel="alternate" type="text/html" title="프레임워크 SQL 2일차" />
+    <published>2025-03-24T00:00:00+09:00</published>
+  
+    <updated>2025-03-24T00:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC-2%EB%B2%88%EC%A7%B8/</id>
+    <content type="text/html" src="http://localhost:4000/posts/%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC-2%EB%B2%88%EC%A7%B8/" />
+    <author>
+      <name>your_full_name</name>
+    </author>
+
+  
+    
+    <category term="SQL" />
+    
+  
+
+  <summary>Q1 Q1-5 : 박지성이 구매한 도서의 출판사 수  Source Code select count(publisher)  from book, orders  where book.bookid = orders.bookid and orders.custid like 1;  출력 결과                 count(publisher)                       3             Q1-6 : 박지성이 구매한 도서의 이름, 가격, 정가와 판매가의 차이  Source Code select book.bookname, book.price as 정가, price - saleprice from book, orders  where book.bookid = orders.bookid and orders....</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>2025 Study Plan</title>
+    <link href="http://localhost:4000/posts/StudyPlan/" rel="alternate" type="text/html" title="2025 Study Plan" />
+    <published>2025-03-24T00:00:00+09:00</published>
+  
+    <updated>2025-03-24T00:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/StudyPlan/</id>
+    <content type="text/html" src="http://localhost:4000/posts/StudyPlan/" />
+    <author>
+      <name>your_full_name</name>
+    </author>
+
+  
+    
+    <category term="Plan" />
+    
+  
+
+  <summary>NOMAD CHALLENGE TS 챌린지 25/04/05 : START (2주간)  자격증 (전공) 정보처리기사 가격 : 19,400원 필기접수 : 04.14 ~ 04.17 필기시험 : 05.10 ~ 05.30 필기합격 : 06.11  가격 : 22,600원 실기접수 : 06.23 ~ 06.26 실기시험 : 07.19 ~ 08.06 최종합격 : 09.12 리눅스마스터 SQLD 제 57회 SQL 개발자 시험 원서접수 : 04.28 ~ 05.02 수험표 : 05.16 시험일 : 05.31 사전접수공개 및 재검토접수 : 06.20 ~ 06.24 합격자 발표 : 06.27  자격증 (어학) JLPT 1급, TOEIC 시험접수 : 04.01 1000i ~ 04.20 2359i 시험일 : 07.06 입실완료 : ...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>프레임워크 SQL 1일차</title>
+    <link href="http://localhost:4000/posts/%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC-SQL-%EC%97%B0%EC%8A%B5-%EB%A0%88%ED%8F%AC%ED%8A%B8/" rel="alternate" type="text/html" title="프레임워크 SQL 1일차" />
+    <published>2025-03-13T00:00:00+09:00</published>
+  
+    <updated>2025-03-13T00:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC-SQL-%EC%97%B0%EC%8A%B5-%EB%A0%88%ED%8F%AC%ED%8A%B8/</id>
+    <content type="text/html" src="http://localhost:4000/posts/%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC-SQL-%EC%97%B0%EC%8A%B5-%EB%A0%88%ED%8F%AC%ED%8A%B8/" />
+    <author>
+      <name>your_full_name</name>
+    </author>
+
+  
+    
+    <category term="SQL" />
+    
+  
+
+  <summary>Q1 Q1-1 : 도서번호가 1인 도서의 이름  Source Code select bookname from book where bookid like 1;  출력 결과                 bookname                       축구의 역사             Q1-2 : 가격이 20,000원 이상인 도서의 이름  Source Code select bookname from book where price &amp;amp;gt;= 20000;  출력 결과                 bookname                       축구의 이해                 골프 바이블                 야구의 추억             Q1-3 : 박지성의 총 구매액  Source...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Hello MARKDOWN</title>
+    <link href="http://localhost:4000/posts/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4-%EB%AC%B8%EB%B2%95-%EB%B0%B0%EC%9A%B0%EA%B8%B0-1%EC%9D%BC%EC%B0%A8/" rel="alternate" type="text/html" title="Hello MARKDOWN" />
+    <published>2025-03-11T00:00:00+09:00</published>
+  
+    <updated>2025-03-11T00:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4-%EB%AC%B8%EB%B2%95-%EB%B0%B0%EC%9A%B0%EA%B8%B0-1%EC%9D%BC%EC%B0%A8/</id>
+    <content type="text/html" src="http://localhost:4000/posts/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4-%EB%AC%B8%EB%B2%95-%EB%B0%B0%EC%9A%B0%EA%B8%B0-1%EC%9D%BC%EC%B0%A8/" />
+    <author>
+      <name>your_full_name</name>
+    </author>
+
+  
+    
+    <category term="markdown" />
+    
+  
+
+  <summary>Hello MARKDOWN! 우선 본 글에 앞서 오늘 포스팅에 참고를 한 블로그 및 사이트를 나열한다.    지나가는이야기 님 - VSC 마크다운 미리보기   HEROPY.DEV 님 - 마크다운 사용법 총정리   마크다운, 왜 쓰는가? 우선, 내가 마크다운에 관심을 보이는 이유는 단순히 개발자가 많이 쓴다 들어 배워서 손해는 없겠다 싶어서이다. 마크다운을 사용하는 이유에 대해 검색을 조금 거친 결과, 다음과 같은 공통점이 있다. 쉽고(문법이), 가볍고(용량이), 다양성이 있다(범용성이 넓음)  더 검색하고 알게 된 사실    html코드도 가끔씩 적용을 할 수 있다   여기서 작성된 markdown 문서는 인터넷 상에서는 html 문서로 번역되어 나온다   앞서 작성하기전에, 오랜만에 html을 다루다...</summary>
+
+  </entry>
 
 </feed>
 
