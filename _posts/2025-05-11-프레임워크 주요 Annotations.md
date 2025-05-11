@@ -1,0 +1,192 @@
+---
+title: "Java Annotations"
+excerpt: "Java Annotations"
+
+categories:
+  - reports
+
+tags:
+  - [reports]
+
+toc: true
+toc_sticky: true
+
+date: 2025-05-11
+last_modified_at: 2025-05-11
+
+description: Java Annotations
+
+---
+## 🔴 Annotation 정의 및 개념 
+사전적의미 : 주석 ( 코딩에서의 그 주석 ? )
+코드에 메타데이터를 추가하는 작업이며, 
+
+### 🟠 TS와 컴파일러
+TS는 C#, Java, Go, Rust와 같은 Strongly typed 프로그래밍 언어이다.  
+위와 같은 언어들을 떠올릴 때 컴파일러를 같이 떠올릴 수 있는데,   
+코드를 다 작성하고 나면 코드를 컴파일해서 0101 같은 컴퓨터 언어로 바꾸어준다.   
+
+이 컴파일러의 개념은, TS에서는 JS가 그 컴파일러의 역할을 하기 때문이다. 
+
+브라우저는 TS를 이해하지 않고 JS를 이해하기 때문에, TS만으로는 진행하는데에 어려움이 있음  
+
+
+
+## 🔴 TS를 하기 위한 Requirements
+Node.JS 에서 제공하는 npm 을 통해 라이브러리를 이용하여 TS를 깔 수 있다.  
+( 또한, NodeJS는 TS와 JS를 둘 다 이해할 수 있어 사용하기에 용이하다. )
+VSCode 는 여러 가지 플러그인을 제공하고, VSCode를 제작한 MS사가 TS를 만들었기 때문에, 여러 모로 연관성이 좋다고는 하지만 개인적으로는 아직 잘 모르겠다. 
+
+VSCode가 없다거나 개발 환경 세팅이 크게 필요하지 않다면,   
+온라인 편집기 같은 방법을 사용하는 것도 추천한다. 
+
+## 🔴 JS가 있는데 TS는 왜 존재하는가? 
+### 🟠 가장 큰 이유, 안정성
+더 정확히는 타입의 안정성이다.   
+코드의 안정성 / 런타임에러가 줄고 / 버그가 줄어든다
+
+여기서 타입 안정성이 없다는 게 무엇이냐면..
+```javascript
+function divide(a, b) {
+  return a / b
+}
+
+divide(2, 3)
+// 0.666666..
+```
+이 함수에는 나누기를 위한 함수이며, 당연히 숫자를 넣으면 작동한다. 
+
+하지만 숫자 이외의 값을 넣으면 보통 에러를 일으켜 개발자에게 경고를 알려줌으로써 코드의 유효성을 다시생각하게끔 해주는게 JS에는 내장되어 있지 않다.
+
+```javascript
+divide("XXXXX")
+// NaN
+
+/*
+divide 함수는 두 개의 argument 값을 받는데, 
+하나를 넣었고, 게다가 나누어지지 않는 String 값을 넣었는데도 에러를 내보내기는 커녕 NaN이라는 값을 내보낸다. 
+*/
+```
+Java 나 C# 같은 언어들이었으면 값을 입력하는 과정에서 이미 경고를 해주었을 것이다.
+
+그렇다고 JS가 아예 에러를 안내보내는건 아닌데, 그 에러는 런타임 에러이다. 
+### 🟠 에러 중에서도 최악인 런타임 에러
+런타임 에러는 콘솔 안에서 일어나는 에러를 말한다.   
+
+```javascript
+const hyeun = { name : "hyeun" }
+
+hyeun.hello()
+// Uncaught TypeError 메시지
+```
+hyeun이라는 객체를 만들고, hello라는 함수를 실행시키지만 되지않는다  
+당연하지만, hello라는 함수를 만들지 않았기 때문이다.   
+여기서 볼건, TypeError 메시지가 실행시켰을 때 나왔다는 점이다.  
+다른 언어들이었으면 실행시키기도 전에 빨간줄이나 경고메시지를 띄웠을 거란 거다.
+
+TS 를 사용한다면, 결과적으로 이 모든 문제가 해결된다.
+
+아까 TS에서 JS로 컴파일을 하는 과정이 있음을 소개했는데,   
+그렇다면 TS는 JS에 비해 어떻게 코드의 안정성을 보장하는가?  
+
+결론부터 말하자면, TS는 변환된 JS안에서 에러를 잡아낸다.   
+이 과정은 보이지 않는다고 생각하는게, 만약 잘못된 TS코드를 작성하게 되면  
+TS에서 JS로 변환이 아예 안되기 때문이다. ( 에러코드가 있으면 변환하는 과정에서 잡는듯 )  
+  
+반대로, JS가 정상적으로 실행된다면 TS코드도 맞다는 이야기이다.  
+
+## 🔴 TS의 Types
+TS에는 Type 이라는 시스템이 있다. 
+다른 언어들에서도 일일히 변수나 함수들의 타입을 정해줘야하는 경우가 많다. ( Java 같은 명시적인 언어들 )  
+
+TS는 두가지 접근방식을 결합하였는데,   
+01. 데이터와 변수의 타입을 명시적으로 정의하는 방법 ( Explicit Type )  
+```Typescript
+let a : string = "x"
+```  
+이 경우, a 의 타입은 string 이기에 만약 string 이외의 값을 넣어주면 에러가 발생한다. 
+
+02. JS처럼 변수만 생성하고 넘어가는 방법. ( 이 경우, TS에서 변수의 타입을 추론한다 )  ( Implicit Type )
+```Typescript
+let b = "Hello"
+```
+b의 타입이 명시되어 있지 않기 때문에, TS 에서 추측하여 ( 들어간 값을 통해 )  
+결과적으로 b의 타입은 string이 된다. 
+
+안정성 조금 더 어필 하는 차원에서 b의 코드를 JS로 보면
+```JS
+let b = "Hello"
+b = 3
+
+// 정상실행 ( b의 타입이 String -> number으로 바뀐다. )
+// TS에서는 물론 에러가 뜬다. String이라 이미 추론한 상황에서 number타입을 넣으려 했기 때문이다. 
+```
+보통 상황에서는 명시적 표현은 최소한으로 쓰는 편이 좋은데, 왜냐하면 코드의 가독성이 좋아지기 때문이다. ( 한번 명시하면 변수의 타입을 바꾸는 건 흔하지 않으니까 )  
+
+### 🟠 Optional 타입 
+```TS
+const player = {
+  name: "devken65" 
+}
+// 만약, 
+// player 객체가 여러개 있고, 
+// 모든 player 객체는 name을 가지지만 몇몇은 age 라는 속성을 가진다 한다면?
+```
+```TS 
+const player : {
+  name:string,
+  age?:number
+} = {
+  name = "devken65"
+}
+// 구조는 player 객체에 타입을 명시하고, 그 다음 {} 에  실제 내용을 명시하는 구조이다. 
+// 여기서 age는 선택적이어야하므로, 이름에 ? 를 붙여 있을수도 / 없을수도 한걸 알려준다. (optional parameter의 지정 방법)
+```
+
+### 🟠 Alias(별칭)
+player 객체를 여러 개 만들어야 한다면, 똑같은 내용의 중복 코드가 발생하게 될텐데   
+중복 코드는 코드의 가독성을 떨어뜨리기에 Alias 를 이용하여 이 중복 코드를 줄여줄 수 있다.   
+```TS
+type Player = {
+  name:string,
+  age?:number
+}
+// 이렇게 생성된 Alias를 이용해 객체를 만들게 되면
+const devken65 : Player = {
+  name:"devken65"
+}
+const devson21 : Player = {
+  name:"devson21",
+  age: 22
+}
+// 단순히 player 객체를 여러개 만들어 주는 것보다는 훨씬 나은 코드가 작성되었다 
+```
+
+TIP : Alias를 사용해서 이렇게 정돈도 가능하지만, 과사용은 자제하는편이 좋다. 
+```TS
+type Name = string;
+type Age = number;
+type Player = {
+  name:Name,
+  age?:Age
+}
+```
+#### 🟡 Return 값의 타입을 지정하는 방법 
+지금까지는 객체에서의 타입명시를 보았고, 함수에서는 어떻게 하는지 보자
+```TS
+type Player = {
+  name:Name,
+  age?:Age
+}
+function playerMaker(name:string) : Player {
+  return {
+    name // name : name 과 같다
+    // 만약, argument의 이름과 return 에서의 객체가 같은 이름을 가진다면 저렇게 명시해줘도 에러는 발생하지 않는다.
+  }
+}
+
+const devken65 = playerMaker("devken65")
+devken65.age = 26
+// Player 타입을 명시해주었기에, age값을 건드려도 문제가 발생하지 않는다. 
+```
+### 🟠 Readonly 속성을 추가하는법
