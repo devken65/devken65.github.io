@@ -122,7 +122,7 @@ Spring Boot 에서 어노테이션을 통해 자동으로 Bean을 컨테이너�
 3. @Primary 어노테이션  
 @Primary와 @Qulifier 에 대해 알아볼 것이니, 이 두가지만 보도록 한다.  
   
-```Java
+```java
 public interface Animal {
   String sound();
 }
