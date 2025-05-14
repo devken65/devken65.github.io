@@ -108,7 +108,7 @@ org.springframework.context.annotation 패키지의 주석을 사용하여 Sprin
 > 필드, 메소드, 생성자에 넣을 수 있고, 스프링 Bean을 가져오는 가장 기본적인 방법이다.
 {:.prompt-tip}
 
-### 🟡🟠 @Bean 
+### 🟠 @Bean 
 기능 : 개발자가 직접 제어가 불가능한 외부 라이브러리 등을 Bean으로 만들려 할 때 사용한다.
 
 ### 🟠 @Primary / @Qualifier
@@ -155,7 +155,7 @@ public class AnimalService{
 ```
 @Qualifier 어노테이션은 Bean에 추가 구분자를 붙여주는 방법이다. 
 생성자에서 해당 구분자를 명시하면, 그 구분자를 가진 Bean을 주입해주는 방식이다.  
-```Java
+```java
 @Component
 @Qualifier("dogdog")
 public class Dog implements Animal {
@@ -184,7 +184,7 @@ public class AnimalService {
 {:.prompt-tip}
   
 @Primary 어노테이션은 가장 간단한 방법으로 여러 Bean이 있을 때 기본적으로 선택될 Bean을 설정하는 어노테이션이다. ( 간단히 말해 우선순위 지정 / 디폴트 Bean 지정 )  
-```Java
+```java
 @Component
 @Primary
 public class Dog implements Animal {
@@ -226,7 +226,7 @@ public class AnimalService {
 구성(Configuration) 메타데이터를 추가하는 방법 중 하나이다.  
 이를 통해 다른 구성 클래스를 로드 / 동적으로 빈을 등록 할 수 있다.  
 라고는 하지만, 실은 많은 설정 클래스들이 존재할 때 하나로 합치게 도와주는 어노테이션이다. 
-```Java
+```java
 @Configuration
 @Import(ServiceConfig.class) // ServiceConfig를 포함
 class AppConfig {
@@ -258,7 +258,7 @@ XML 설정 파일을 Spring 설정 클래스에 포함할 때 쓰인다는데.. 
 Properties 파일에 app.name 으로 MySpringApp,  
 app.version을 1.0.0 이라는 Property를 설정했다고 한다.  
   
-```Java
+```java
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
