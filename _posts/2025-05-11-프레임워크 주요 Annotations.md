@@ -3,10 +3,10 @@ title: "Spring / Spring Annotations"
 excerpt: "Spring / Spring Annotations"
 
 categories:
-  - reports
+  - java
 
 tags:
-  - [reports]
+  - [springboot]
 
 toc: true
 toc_sticky: true
